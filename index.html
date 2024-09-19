@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Panel Efficiency Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Solar Panel Efficiency Calculator</h1>
+        <form action="/calculate" method="POST">
+            <label for="area">Panel Area (m²):</label>
+            <input type="number" id="area" name="area" required>
+
+            <label for="sunlight">Sunlight Hours per Day:</label>
+            <input type="number" id="sunlight" name="sunlight" required>
+
+            <label for="efficiency">Panel Efficiency (%):</label>
+            <input type="number" id="efficiency" name="efficiency" required>
+
+            <label for="power">Rated Power Output (W):</label>
+            <input type="number" id="power" name="power" required>
+
+            <button type="submit">Calculate</button>
+        </form>
+    </div>
+</body>
+</html>
